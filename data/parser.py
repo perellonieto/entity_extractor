@@ -33,10 +33,9 @@ class Parser(object):
                     n_sentence += 1
                     X.append([])
                     Y.append([])
-        del X[-1]
-        del Y[-1]
 
-        print("len(X) = {}".format(len(X)))
-        print("len(Y) = {}".format(len(Y)))
+        if X[-1] == []:
+            del X[-1]
+            del Y[-1]
 
         return X, Y
